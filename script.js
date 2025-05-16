@@ -32,8 +32,6 @@ const apiKey = '9ATKie9ZJf8ydFEpWVdjWQ==meQHwQF8D6VSwrBm';
         resultsContainer.innerHTML += `
           <div class="celebrity">
             <strong>Nom :</strong> ${celeb.name}<br>
-            <strong>Valeur nette :</strong> ${celeb.net_worth || 'Inconnue'} M$<br>
-            <strong>Profession :</strong> ${celeb.occupation?.join(', ') || 'Inconnue'}<br>
             <strong>Nationalité :</strong> ${celeb.nationality || 'Inconnue'}
           </div>
         `;
