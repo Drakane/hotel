@@ -1,0 +1,18 @@
+fetch('https://api.api-ninjas.com/v1/celebrity?name=elon%20musk', {
+  method: 'GET',
+  headers: {
+    'X-Api-Key': 'YOUR_API_KEY'
+  }
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok ' + response.statusText);
+  }
+  return response.json();
+})
+.then(data => {
+  console.log(data);
+})
+.catch(error => {
+  console.error('There was a problem with the fetch operation:', error);
+});
