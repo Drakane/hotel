@@ -1,3 +1,4 @@
+
 const services = [
   {
     "id": 1,
@@ -30,16 +31,45 @@ const services = [
 ];
 
 
-const container = document.getElementById("services");
+document.body.style.fontFamily = "Arial, sans-serif";
 
-services.forEach(services => {
-  container.innerHTML += `
-    <div style="margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
-      <h2>${services.nom}</h2>
-      <img src="${services.image}" alt="${services.nom}" style="width: 300px;">
-      <p><strong>Description :</strong> ${services.description}</p>
-      <p><strong>Horaires :</strong> ${services.horaire}</p>
-    </div>
-  `;
+
+const title = document.createElement("h1");
+title.textContent = "Nos Services";
+document.body.appendChild(title);
+
+
+const container = document.createElement("div");
+container.style.padding = "20px";
+document.body.appendChild(container);
+
+
+services.forEach(service => {
+  const card = document.createElement("div");
+  card.style.borderBottom = "1px solid #ccc";
+  card.style.padding = "10px 0";
+  card.style.marginBottom = "20px";
+
+  const h2 = document.createElement("h2");
+  h2.textContent = service.nom;
+
+  const img = document.createElement("img");
+  img.src = service.image;
+  img.alt = service.nom;
+  img.style.width = "300px";
+  img.style.display = "block";
+  img.style.marginBottom = "10px";
+
+  const desc = document.createElement("p");
+  desc.innerHTML = `<strong>Description :</strong> ${service.description}`;
+
+  const horaire = document.createElement("p");
+  horaire.innerHTML = `<strong>Horaires :</strong> ${service.horaire}`;
+
+  card.appendChild(h2);
+  card.appendChild(img);
+  card.appendChild(desc);
+  card.appendChild(horaire);
+
+  container.appendChild(card);
 });
-
