@@ -1,18 +1,18 @@
-fetch('https://api.api-ninjas.com/v1/celebrity?name=elon%20musk', {
+fetch('https://api.api-ninjas.com/v1/celebrity?name=Brad%20Pitt', {
   method: 'GET',
   headers: {
-    'X-Api-Key': 'YOUR_API_KEY'
+    'X-Api-Key': '9ATKie9ZJf8ydFEpWVdjWQ==meQHwQF8D6VSwrBm' 
   }
 })
 .then(response => {
   if (!response.ok) {
-    throw new Error('Network response was not ok ' + response.statusText);
+    throw new Error(`Erreur HTTP: ${response.status}`);
   }
   return response.json();
 })
 .then(data => {
-  console.log(data);
+  console.log(data); 
 })
 .catch(error => {
-  console.error('There was a problem with the fetch operation:', error);
+  console.error('Erreur lors de la requête :', error);
 });
