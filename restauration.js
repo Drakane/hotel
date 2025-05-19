@@ -10,7 +10,7 @@ const restauration = [
     {
       "id": 2,
       "nom": "menu enfant",
-      "description": "boite de 6 nuggets ou un burger avec accompagnement de frites + un jouet (possibilité de repartir avec l'enfant).",
+      "description": "boite de 6 nuggets ou un burger avec accompagnement de frites + un jouet .",
       "prix": "6.50 €",
       "image": "https://i.goopics.net/g2ym6r.png"
     },
