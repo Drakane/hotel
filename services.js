@@ -39,9 +39,9 @@ title.textContent = "Nos Services";
 document.body.appendChild(title);
 
 
-const container = document.createElement("div");
+const container = document.getElementById("services");
 container.style.padding = "20px";
-document.body.appendChild(container);
+
 
 
 services.forEach(service => {
