@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nom": "nuggets de poulet et ses frites",
+    "nom": "suprê de volaille dorée",
     "description": "Suprêmes de Volaille Dorés, Accompagnés de Pommes de Terre en Allumettes\n\nTendres bouchées de filet de poulet mariné, enrobées d’une panure croustillante dorée à la perfection, frites à cœur dans une huile aux herbes aromatiques. Servies avec une généreuse portion de pommes de terre taillées en allumettes, croustillantes à l’extérieur et fondantes à l’intérieur.",
     "prix": "19.50 €",
     "image": "./assets/img/services/spa.jpg"
@@ -9,7 +9,7 @@
   {
     "id": 2,
     "nom": "menu enfant",
-    "description": "boite de 6 nuggets ou un burger avec accompagnement de frites + un jouet (possibilité de repartir avec l'enfant).",
+    "description": "boite de 6 nuggets ou un burger avec accompagnement de frites + un jouet.",
     "prix": "6.50 €",
     "image": "https://i.goopics.net/g2ym6r.png"
   },
@@ -26,5 +26,12 @@
     "description": "Une base de génoise, couche de crème à la meringue et enfin une ganache au chocolat qui fait office de glaçage.",
     "prix": "3.50€ la part",
     "image": "https://i.goopics.net/fiuuft.png"
+  },
+  {
+    "id": 5,
+    "nom": "île flottante",
+    "description": "composé de blancs d'œufs sucrés, fouettés, pochés ou cuits au lait au bain-marie, généralement nappés de caramel, et servis sur une crème anglaise.",
+    "prix": "4 € ",
+    "image": "https://i.goopics.net/cjgk8t.jpg"
   }
 ]
