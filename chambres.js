@@ -1,4 +1,4 @@
-const chambres = [
+   const chambres = [
       {
         id: 1,
         chambre: "Céleste",
