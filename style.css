@@ -788,33 +788,41 @@ h3 {
 /* Media Queries pour la responsivité */
 @media screen and (max-width: 768px) {
     nav {
-        padding: 10px;
+        padding: 5px;
+        min-height: 60px;
     }
 
     .logo {
-        width: 100px;
-        height: 100px;
-        left: 10px;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        transform: none;
+        width: 50px;
+        height: 50px;
     }
 
     nav h1 {
-        font-size: 1.8em;
-        margin-left: 120px;
+        font-size: 1.4em;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        padding-left: 60px;
     }
 
     nav ul {
         flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
+        gap: 5px;
+        padding: 5px;
+        margin-top: 5px;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 2px 0;
     }
 
     nav ul li a {
-        padding: 8px 12px;
-        font-size: 0.9em;
+        padding: 6px 10px;
+        font-size: 0.8em;
     }
 
     /* Ajustements pour le header */
@@ -881,23 +889,22 @@ h3 {
 
 @media screen and (max-width: 480px) {
     .logo {
-        width: 80px;
-        height: 80px;
-        left: 5px;
+        width: 40px;
+        height: 40px;
     }
 
     nav h1 {
-        font-size: 1.5em;
-        margin-left: 100px;
+        font-size: 1.2em;
+        padding-left: 50px;
     }
 
     nav ul {
-        gap: 5px;
+        gap: 3px;
     }
 
     nav ul li a {
-        padding: 6px 10px;
-        font-size: 0.8em;
+        padding: 4px 8px;
+        font-size: 0.7em;
     }
 
     .hero-section {
@@ -925,6 +932,26 @@ h3 {
 
 /* Ajustements pour les tablettes */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        padding: 10px;
+        min-height: 80px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        transform: none;
+        width: 60px;
+        height: 60px;
+    }
+
+    nav h1 {
+        font-size: 1.6em;
+        margin: 0;
+        padding-left: 80px;
+    }
+
     .features-grid,
     .celebrity-grid,
     .restaurant-grid,
