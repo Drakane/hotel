@@ -10,6 +10,7 @@ const names = [
 const resultsContainer = document.getElementById('results');
 resultsContainer.innerHTML = ''; 
 
+
 function fetchCelebrity(person) {
   fetch(`https://api.api-ninjas.com/v1/celebrity?name=${encodeURIComponent(person.name)}`, {
     method: 'GET',
