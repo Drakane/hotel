@@ -4,27 +4,27 @@
     "nom": "Spa et bien-être",
     "description": "Profitez d’un moment de détente dans notre spa aux senteurs tropicales avec massages, sauna et hammam inclus.",
     "horaire": "10h - 20h",
-    "image": "./assets/img/services/spa.jpg"
+    "image": "https://i.goopics.net/pyjcnu.jpg"
   },
   {
     "id": 2,
     "nom": "Salle de sport",
     "description": "Accès libre 24h/24 à notre salle de fitness équipée de matériel haut de gamme et de cours en ligne.",
     "horaire": "24h/24",
-    "image": "./assets/img/services/fitness.jpg"
+    "image": "https://i.goopics.net/v96rx9.jpg"
   },
   {
     "id": 3,
     "nom": "Conciergerie",
     "description": "Réservations, conseils touristiques, organisation de vos déplacements : notre équipe est à votre écoute.",
     "horaire": "7h - 23h",
-    "image": "./assets/img/services/concierge.jpg"
+    "image": "https://i.goopics.net/jvfawl.jpg"
   },
   {
     "id": 4,
     "nom": "Piscine à débordement",
     "description": "Baignade avec vue sur l’océan. Bar à cocktails et transats à disposition.",
     "horaire": "8h - 21h",
-    "image": "./assets/img/services/piscine.jpg"
+    "image": "https://i.goopics.net/wc1jei.jpg"
   }
 ]
