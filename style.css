@@ -44,14 +44,46 @@ header img {
 }
 
 
+nav {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #2C3E50, #34495E);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+
+nav h1 {
+    color: #F6E3B4;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
 nav ul {
     position: relative;
     z-index: 2;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     list-style: none;
     padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 nav a {
@@ -59,6 +91,8 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s;
+    text-align: center;
+    padding: 8px 15px;
 }
 
 nav a:hover {
@@ -87,11 +121,11 @@ footer {
 .contact-form {
     background: #2C3E50;
        color: #F6E3B4;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+    border-radius: 166px;
+    box-shadow: 0 2px 102px rgba(44,62,80,0.10);
     max-width: 400px;
     margin: 40px auto;
-    padding: 32px 24px;
+    padding: 100px 100px;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -112,18 +146,6 @@ main {
     height: auto;
     border-radius: 12px;
     margin-bottom: 16px;
-}
-
-/* Styles pour les nuages */
-nav {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(to bottom, #2C3E50, #34495E);
-}
-
-nav ul {
-    position: relative;
-    z-index: 2;
 }
 
 .cloud {
@@ -385,7 +407,7 @@ h3 {
     font-style: italic;
 }
 
-/* Styles pour les cartes de restauration */
+
 .restaurant-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -453,7 +475,7 @@ h3 {
     background: linear-gradient(to bottom right, #fff, #f0f4f8);
 }
 
-/* Styles pour les cartes de menu */
+
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -521,7 +543,7 @@ h3 {
     text-align: right;
 }
 
-/* Styles pour les cartes de services */
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -593,7 +615,7 @@ h3 {
     font-weight: 600;
 }
 
-/* Styles pour les cartes d'hébergement */
+
 .hebergement-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -666,7 +688,7 @@ h3 {
     font-weight: 600;
 }
 
-/* Styles pour le hero section */
+
 .hero-section {
     position: relative;
     height: 80vh;
@@ -761,4 +783,162 @@ h3 {
 .feature-card p {
     color: #666;
     line-height: 1.6;
+}
+
+/* Media Queries pour la responsivité */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        left: 10px;
+    }
+
+    nav h1 {
+        font-size: 1.8em;
+        margin-left: 120px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    /* Ajustements pour le header */
+    header {
+        padding: 10px 0;
+        position: relative;
+    }
+
+    header div {
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+        margin: 0;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+
+    /* Ajustements pour le hero section */
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    /* Ajustements pour les grilles */
+    .features-grid,
+    .celebrity-grid,
+    .restaurant-grid,
+    .menu-grid,
+    .services-grid,
+    .hebergement-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    /* Ajustements pour les cartes */
+    .info-card {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .info-card h2 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 80px;
+        height: 80px;
+        left: 5px;
+    }
+
+    nav h1 {
+        font-size: 1.5em;
+        margin-left: 100px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+    .hero-section {
+        height: 50vh;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9em;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Ajustements pour les tablettes */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .features-grid,
+    .celebrity-grid,
+    .restaurant-grid,
+    .menu-grid,
+    .services-grid,
+    .hebergement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-section {
+        height: 70vh;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
 }
