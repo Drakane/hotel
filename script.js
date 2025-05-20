@@ -26,28 +26,42 @@ function fetchCelebrity(person) {
   .then(data => {
     if (data.length === 0) {
       resultsContainer.innerHTML += `
-        <div class="celebrity">
-          <img src="${person.image}" alt="${person.name}" style="width:120px;"><br>
-          <strong>${person.name}</strong> : Aucun résultat trouvé.
+        <div class="celebrity-card">
+          <div class="celebrity-image">
+            <img src="${person.image}" alt="${person.name}">
+          </div>
+          <div class="celebrity-info">
+            <h3>${person.name}</h3>
+            <p>Aucune information disponible</p>
+          </div>
         </div>`;
       return;
     }
 
     const celeb = data[0];
     resultsContainer.innerHTML += `
-      <div class="celebrity">
-        <img src="${person.image}" alt="${person.name}" style="width:120px;"><br>
-        <strong>Nom :</strong> ${celeb.name}<br>
-        <strong>Nationalité :</strong> ${celeb.nationality || 'Inconnue'}
+      <div class="celebrity-card">
+        <div class="celebrity-image">
+          <img src="${person.image}" alt="${person.name}">
+        </div>
+        <div class="celebrity-info">
+          <h3>${celeb.name}</h3>
+          <p><strong>Nationalité :</strong> ${celeb.nationality || 'Inconnue'}</p>
+        </div>
       </div>
     `;
   })
   .catch(error => {
     console.error('Erreur pour', person.name, ':', error);
     resultsContainer.innerHTML += `
-      <div class="celebrity" style="color:red;">
-        <img src="${person.image}" alt="${person.name}" style="width:120px;"><br>
-        <strong>${person.name}</strong> : Erreur - ${error.message}
+      <div class="celebrity-card error">
+        <div class="celebrity-image">
+          <img src="${person.image}" alt="${person.name}">
+        </div>
+        <div class="celebrity-info">
+          <h3>${person.name}</h3>
+          <p class="error-message">Erreur de chargement des données</p>
+        </div>
       </div>`;
   });
 }

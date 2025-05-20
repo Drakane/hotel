@@ -187,3 +187,351 @@ main {
     font-size: 1.5em;
     font-family: 'Playfair Display', serif;
 }
+
+/* Styles pour les cartes de célébrités */
+.celebrity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.celebrity-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.celebrity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(44,62,80,0.15);
+}
+
+.celebrity-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.celebrity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.celebrity-card:hover .celebrity-image img {
+    transform: scale(1.05);
+}
+
+.celebrity-info {
+    padding: 20px;
+}
+
+.celebrity-info h3 {
+    color: #2C3E50;
+    font-size: 1.4em;
+    margin: 0 0 12px 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.celebrity-info p {
+    color: #666;
+    margin: 8px 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.celebrity-card.error {
+    border: 2px solid #ff6b6b;
+}
+
+.celebrity-card.error .error-message {
+    color: #ff6b6b;
+    font-style: italic;
+}
+
+/* Styles pour les cartes de restauration */
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.restaurant-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(44,62,80,0.15);
+    border-color: #A3B18A;
+}
+
+.restaurant-info {
+    padding: 24px;
+}
+
+.restaurant-info h3 {
+    color: #2C3E50;
+    font-size: 1.4em;
+    margin: 0 0 16px 0;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    text-transform: none;
+    border-bottom: 2px solid #A3B18A;
+    padding-bottom: 8px;
+}
+
+.restaurant-info p {
+    color: #666;
+    margin: 12px 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.restaurant-info strong {
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+.restaurant-card:nth-child(1) {
+    background: linear-gradient(to bottom right, #fff, #f8f9fa);
+}
+
+.restaurant-card:nth-child(2) {
+    background: linear-gradient(to bottom right, #fff, #f0f4f8);
+}
+
+.restaurant-card:nth-child(3) {
+    background: linear-gradient(to bottom right, #fff, #f8f9fa);
+}
+
+.restaurant-card:nth-child(4) {
+    background: linear-gradient(to bottom right, #fff, #f0f4f8);
+}
+
+/* Styles pour les cartes de menu */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(44,62,80,0.15);
+}
+
+.menu-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-image img {
+    transform: scale(1.05);
+}
+
+.menu-info {
+    padding: 20px;
+}
+
+.menu-info h3 {
+    color: #2C3E50;
+    font-size: 1.4em;
+    margin: 0 0 12px 0;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    text-transform: none;
+}
+
+.menu-info .description {
+    color: #666;
+    margin: 12px 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.menu-info .price {
+    color: #A3B18A;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 16px;
+    text-align: right;
+}
+
+/* Styles pour les cartes de services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(44,62,80,0.15);
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    color: #2C3E50;
+    font-size: 1.4em;
+    margin: 0 0 12px 0;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    text-transform: none;
+}
+
+.service-info .description {
+    color: #666;
+    margin: 12px 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.service-info .horaire {
+    color: #A3B18A;
+    margin-top: 16px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.service-info strong {
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+/* Styles pour les cartes d'hébergement */
+.hebergement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hebergement-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hebergement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(44,62,80,0.15);
+}
+
+.hebergement-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.hebergement-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hebergement-card:hover .hebergement-image img {
+    transform: scale(1.05);
+}
+
+.hebergement-info {
+    padding: 20px;
+}
+
+.hebergement-info h3 {
+    color: #2C3E50;
+    font-size: 1.4em;
+    margin: 0 0 12px 0;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    text-transform: none;
+}
+
+.hebergement-info .description {
+    color: #666;
+    margin: 12px 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.hebergement-info .prix {
+    color: #A3B18A;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 16px;
+    text-align: right;
+}
+
+.hebergement-info strong {
+    color: #2C3E50;
+    font-weight: 600;
+}

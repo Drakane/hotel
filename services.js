@@ -1,31 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-  fetch('./services.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Erreur HTTP : ' + response.status);
-      }
-      return response.json();
-    })
-    .then(data => {
-      const section = document.getElementById('services');
-      if (!section) {
-        console.error('Section avec ID "services" introuvable');
-        return;
-      }
-
-      data.forEach(service => {
-        const div = document.createElement('div');
-        div.innerHTML = `
-          <h3>${service.nom}</h3>
-          <img src="${service.image}" alt="${service.nom}" style="max-width: 300px;">
-          <p>${service.description}</p>
-          <p><strong>Horaires : ${service.horaire}</strong></p>
-        `;
-        section.appendChild(div);
-      });
-    })
-    .catch(error => {
-      console.error('Erreur lors du fetch :', error);
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    const servicesContainer = document.getElementById('services-container');
+    
+    // Charger les données du fichier JSON
+    fetch('services.json')
+        .then(response => response.json())
+        .then(data => {
+            // Vider le conteneur
+            servicesContainer.innerHTML = '';
+            
+            // Créer les cartes pour chaque service
+            data.forEach(service => {
+                const card = document.createElement('div');
+                card.className = 'service-card';
+                
+                card.innerHTML = `
+                    <div class="service-image">
+                        <img src="${service.image}" alt="${service.nom}">
+                    </div>
+                    <div class="service-info">
+                        <h3>${service.nom}</h3>
+                        <p class="description">${service.description}</p>
+                        <p class="horaire"><strong>Horaires :</strong> ${service.horaire}</p>
+                    </div>
+                `;
+                
+                servicesContainer.appendChild(card);
+            });
+        })
+        .catch(error => {
+            console.error('Erreur lors du chargement des données:', error);
+            servicesContainer.innerHTML = '<p class="error">Erreur lors du chargement des services.</p>';
+        });
 });
 

@@ -13,15 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      // Créer un conteneur pour les cartes
+      const cardsContainer = document.createElement('div');
+      cardsContainer.className = 'hebergement-grid';
+      section.appendChild(cardsContainer);
+
       data.forEach(chambre => {
-        const div = document.createElement('div');
-        div.innerHTML = `
-          <h3>${chambre.chambre}</h3>
-          <img src="${chambre.image}" alt="${chambre.chambre}" style="max-width: 300px;">
-          <p>${chambre.description}</p>
-          <p><strong>${chambre.prix}</strong></p>
+        const card = document.createElement('div');
+        card.className = 'hebergement-card';
+        
+        card.innerHTML = `
+          <div class="hebergement-image">
+            <img src="${chambre.image}" alt="${chambre.chambre}">
+          </div>
+          <div class="hebergement-info">
+            <h3>${chambre.chambre}</h3>
+            <p>${chambre.description}</p>
+            <p><strong>${chambre.prix}</strong></p>
+          </div>
         `;
-        section.appendChild(div);
+        
+        cardsContainer.appendChild(card);
       });
     })
     .catch(error => {

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nom": "Spa et bien-être",
-    "description": "Profitez d’un moment de détente dans notre spa aux senteurs tropicales avec massages, sauna et hammam inclus.",
+    "description": "Profitez d'un moment de détente dans notre spa aux senteurs tropicales avec massages, sauna et hammam inclus.",
     "horaire": "10h - 20h",
     "image": "https://i.goopics.net/pyjcnu.jpg"
   },
@@ -23,7 +23,7 @@
   {
     "id": 4,
     "nom": "Piscine à débordement",
-    "description": "Baignade avec vue sur l’océan. Bar à cocktails et transats à disposition.",
+    "description": "Baignade avec vue sur l'océan. Bar à cocktails et transats à disposition.",
     "horaire": "8h - 21h",
     "image": "https://i.goopics.net/wc1jei.jpg"
   }

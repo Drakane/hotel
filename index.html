@@ -9,11 +9,265 @@
         nav {
             position: relative;
             overflow: hidden;
+            background: linear-gradient(to bottom, #2C3E50, #34495E);
         }
 
         nav ul {
             position: relative;
             z-index: 2;
+        }
+
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            box-shadow: 
+                0 0 20px rgba(255, 255, 255, 0.3),
+                inset 0 0 20px rgba(255, 255, 255, 0.5);
+            filter: blur(1px);
+            opacity: 0.9;
+            z-index: 1;
+            pointer-events: none;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            filter: blur(1px);
+        }
+
+        .cloud::before {
+            width: 50%;
+            height: 100%;
+            top: -50%;
+            left: 25%;
+        }
+
+        .cloud::after {
+            width: 30%;
+            height: 60%;
+            top: -30%;
+            left: 10%;
+        }
+
+        .cloud1 {
+            width: 200px;
+            height: 60px;
+            top: 10px;
+            left: -200px;
+            animation-delay: 0s;
+            animation: float1 15s infinite ease-in-out;
+        }
+
+        .cloud2 {
+            width: 180px;
+            height: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -180px;
+            animation-delay: 2s;
+            animation: float2 18s infinite ease-in-out;
+        }
+
+        .cloud3 {
+            width: 220px;
+            height: 70px;
+            bottom: 10px;
+            left: -220px;
+            animation-delay: 4s;
+            animation: float3 20s infinite ease-in-out;
+        }
+
+        .cloud4 {
+            width: 160px;
+            height: 45px;
+            top: 30%;
+            transform: translateY(-50%);
+            right: -160px;
+            animation-delay: 6s;
+            animation: float4 17s infinite ease-in-out;
+        }
+
+        .cloud5 {
+            width: 240px;
+            height: 65px;
+            bottom: 20px;
+            left: -240px;
+            animation-delay: 8s;
+            animation: float5 22s infinite ease-in-out;
+        }
+
+        @keyframes float1 {
+            0% {
+                transform: translateX(0) translateY(0);
+                left: -200px;
+            }
+            50% {
+                transform: translateX(calc(100vw + 200px)) translateY(-15px);
+            }
+            100% {
+                transform: translateX(0) translateY(0);
+                left: -200px;
+            }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translateX(0) translateY(-50%);
+                right: -180px;
+            }
+            50% {
+                transform: translateX(calc(-100vw - 180px)) translateY(-50%) translateY(15px);
+            }
+            100% {
+                transform: translateX(0) translateY(-50%);
+                right: -180px;
+            }
+        }
+
+        @keyframes float3 {
+            0% {
+                transform: translateX(0) translateY(0);
+                left: -220px;
+            }
+            50% {
+                transform: translateX(calc(100vw + 220px)) translateY(10px);
+            }
+            100% {
+                transform: translateX(0) translateY(0);
+                left: -220px;
+            }
+        }
+
+        @keyframes float4 {
+            0% {
+                transform: translateX(0) translateY(-50%);
+                right: -160px;
+            }
+            50% {
+                transform: translateX(calc(-100vw - 160px)) translateY(-50%) translateY(-10px);
+            }
+            100% {
+                transform: translateX(0) translateY(-50%);
+                right: -160px;
+            }
+        }
+
+        @keyframes float5 {
+            0% {
+                transform: translateX(0) translateY(0);
+                left: -240px;
+            }
+            50% {
+                transform: translateX(calc(100vw + 240px)) translateY(5px);
+            }
+            100% {
+                transform: translateX(0) translateY(0);
+                left: -240px;
+            }
+        }
+
+        .cloud.reverse {
+            animation-direction: reverse;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            background: rgba(44, 62, 80, 0.7);
+            border-radius: 20px;
+            max-width: 800px;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #A3B18A;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background: #8B9D6F;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 1rem;
+            color: #A3B18A;
+        }
+
+        .feature-card h3 {
+            color: #2C3E50;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -32,7 +286,7 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="Célébrités.html">Célébrités</a></li>
-                <li><a href="Hebergement.html">Hébregement</a></li>
+                <li><a href="Hebergement.html">Hebergement</a></li>
                 <li><a href="Restauration.html">Restauration</a></li>
                 <li><a href="Services.html">Service</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -41,25 +295,44 @@
     </header>
 
     <main>
+        <section class="hero-section">
+            <img src="hotel.png" alt="Hôtel L'Aube Suspendue" class="hero-image">
+            <div class="hero-content">
+                <h2>Bienvenue à L'Aube Suspendue</h2>
+                <p>Un havre de paix flottant entre ciel et terre, où chaque moment devient une expérience inoubliable.</p>
+                <a href="Hebergement.html" class="cta-button">Découvrir nos chambres</a>
+            </div>
+        </section>
+
         <div class="info-card">
-            <h3>À propos de L’Aube Suspendue</h3>
+            <h3>À propos de L'Aube Suspendue</h3>
             <h2>
-                Perché au-dessus des nuages, L’Aube Suspendue n’est pas un simple hôtel : c’est une expérience onirique, un voyage hors du temps où le ciel devient votre plafond et l’horizon, votre fenêtre.<br><br>
-                Imaginé comme un sanctuaire flottant, notre hôtel allie architecture éthérée en bois flottant et technologies fictives de sustentation pour vous offrir un séjour littéralement suspendu entre ciel et terre. Chaque détail, du mobilier sculpté à la main aux terrasses ouvertes sur l’infini, évoque la légèreté, la paix et le rêve.<br><br>
-                Niché au sommet d’une mer de nuages, entre montagnes silencieuses et rayons dorés de l’aube, L’Aube Suspendue vous invite à vous reconnecter à l’essentiel : le calme, la beauté, et l’émerveillement.<br><br>
-                🌙 Nos promesses :<br>
-                Des chambres immersives, chacune inspirée d’un type de rêve (forêt flottante, astronomie, enfance, etc.).<br><br>
-                Une gastronomie céleste à base de produits locaux sublimés par des chefs imaginaires de renom.<br><br>
-                Des espaces de bien-être aériens (spa du zéphyr, bains de brume, yoga sur plateforme flottante).<br><br>
-                Un service sur-mesure, discret, raffiné et enchanteur.<br><br>
-                ✨ L’Aube Suspendue<br>
-                Dormez sur un nuage. Réveillez-vous dans un rêve.
+                Perché au-dessus des nuages, L'Aube Suspendue n'est pas un simple hôtel : c'est une expérience onirique, un voyage hors du temps où le ciel devient votre plafond et l'horizon, votre fenêtre.<br><br>
+                Imaginé comme un sanctuaire flottant, notre hôtel allie architecture éthérée en bois flottant et technologies fictives de sustentation pour vous offrir un séjour littéralement suspendu entre ciel et terre. Chaque détail, du mobilier sculpté à la main aux terrasses ouvertes sur l'infini, évoque la légèreté, la paix et le rêve.<br><br>
+                Niché au sommet d'une mer de nuages, entre montagnes silencieuses et rayons dorés de l'aube, L'Aube Suspendue vous invite à vous reconnecter à l'essentiel : le calme, la beauté, et l'émerveillement.
             </h2>
         </div>
 
-        <div class="hotel-card">
-            <img src="hotel.png" alt="Hôtel L'Aube Suspendue">
-            <div class="hotel-card-content">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌙</div>
+                <h3>Chambres Immersives</h3>
+                <p>Des suites uniques inspirées par différents types de rêves, offrant une expérience de séjour inoubliable.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🍽️</div>
+                <h3>Gastronomie Céleste</h3>
+                <p>Une cuisine raffinée à base de produits locaux, sublimée par nos chefs étoilés.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💆</div>
+                <h3>Bien-être Aérien</h3>
+                <p>Des espaces de détente uniques : spa du zéphyr, bains de brume, yoga sur plateforme flottante.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Service Sur-mesure</h3>
+                <p>Un service discret, raffiné et enchanteur pour répondre à vos moindres désirs.</p>
             </div>
         </div>
     </main>
