@@ -26,5 +26,19 @@
     "description": "Baignade avec vue sur l'océan. Bar à cocktails et transats à disposition.",
     "horaire": "8h - 21h",
     "image": "https://i.goopics.net/wc1jei.jpg"
+  },
+  {
+    "id": 5,
+    "nom": "Salle de jeu",
+    "description": "Salle de jeu contenant un espace de spectacle, un espace d'arcade ainsi qu'un espace de jeux de plateau.",
+    "horaire": "9h - 20h",
+    "image": "https://i.goopics.net/2kdusd.jpg"
+  },
+  {
+    "id": 5,
+    "nom": "Espace cinema",
+    "description": "Espace cinema diffusant trois films chaque soir selon la demande.",
+    "horaire": "20h-02h",
+    "image": "https://i.goopics.net/goocnc.jpg"
   }
 ]

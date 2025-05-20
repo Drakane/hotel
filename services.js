@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const servicesContainer = document.getElementById('services-container');
     
-    // Charger les données du fichier JSON
+    
     fetch('services.json')
         .then(response => response.json())
         .then(data => {
-            // Vider le conteneur
+            
             servicesContainer.innerHTML = '';
             
-            // Créer les cartes pour chaque service
+            
             data.forEach(service => {
                 const card = document.createElement('div');
                 card.className = 'service-card';
